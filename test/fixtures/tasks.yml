@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  start_date: 2021-05-23
+  status: MyString
+  description: MyText
+  project_id: 1
+  progress: 1
+  task_category_id: 1
+  due_date: 2021-05-23
+  priority: 1
+
+two:
+  name: MyString
+  start_date: 2021-05-23
+  status: MyString
+  description: MyText
+  project_id: 1
+  progress: 1
+  task_category_id: 1
+  due_date: 2021-05-23
+  priority: 1
