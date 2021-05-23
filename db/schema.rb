@@ -26,14 +26,14 @@ ActiveRecord::Schema.define(version: 2021_05_23_094212) do
   end
 
   create_table "project_categories", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "name"
+    t.string "name", limit: 255
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "projects", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "name"
-    t.string "status"
+    t.string "name", limit: 255
+    t.string "status", limit: 255
     t.integer "progress"
     t.text "description"
     t.date "due_date"
@@ -49,15 +49,15 @@ ActiveRecord::Schema.define(version: 2021_05_23_094212) do
   end
 
   create_table "task_categories", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "name"
+    t.string "name", limit: 255
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "tasks", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "name"
+    t.string "name", limit: 255
     t.date "start_date"
-    t.string "status"
+    t.string "status", limit: 255
     t.text "description"
     t.integer "project_id"
     t.integer "progress"
@@ -74,11 +74,11 @@ ActiveRecord::Schema.define(version: 2021_05_23_094212) do
   end
 
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "email"
-    t.string "department"
-    t.string "password_digest"
+    t.string "email", limit: 255
+    t.string "department", limit: 255
+    t.string "password_digest", limit: 255
     t.text "image_url"
-    t.string "name"
+    t.string "name", limit: 255
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
