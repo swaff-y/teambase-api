@@ -1,6 +1,5 @@
 class ProjectCategoriesController < ApplicationController
   before_action :set_project_category, only: [:show, :update, :destroy]
-  skip_before_action :verify_authenticity_token
 
   # GET /project_categories
   def index
