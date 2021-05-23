@@ -1,9 +1,4 @@
 Rails.application.routes.draw do
-  resources :task_categories
-  resources :users
-  resources :tasks
-  resources :project_categories
-  resources :notes
-  resources :projects
+  post 'user_token' => 'user_token#create'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

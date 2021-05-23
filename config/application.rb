@@ -14,6 +14,7 @@ require "action_view/railtie"
 require "action_cable/engine"
 # require "sprockets/railtie"
 require "rails/test_unit/railtie"
+require "active_support/core_ext/integer/time"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -23,13 +24,6 @@ module BackendApi
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
-
-    config.middleware.insert_before 0, Rack::Cors do
-      allow do
-          origins '*'
-          resource '*', headers: :any, methods: [:get, :post, :put, :patch, :delete, :options, :head]
-      end
-    end
 
     # Configuration for the application, engines, and railties goes here.
     #
