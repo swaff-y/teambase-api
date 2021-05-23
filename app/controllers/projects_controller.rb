@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :update, :destroy]
   skip_before_action :verify_authenticity_token
-  before_action :authenticate_user
+  # before_action :authenticate_user
 
   # GET /projects
   def index
@@ -45,7 +45,7 @@ class ProjectsController < ApplicationController
     projects = User.find_by(id: params[:user]).projects
     render json: projects, include: ['tasks']
   end
-  
+
   def user_project
     project = Project.find_by(id: params[:project_id])
     render json: project,
