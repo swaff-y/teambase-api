@@ -41,3 +41,4 @@ gem 'pry-rails'
 gem 'faker'
 
 gem "rack-cors"
+gem "nokogiri"
