@@ -1,8 +1,8 @@
 class CreateProjects < ActiveRecord::Migration[6.1]
   def change
     create_table :projects do |t|
-      t.string :name
-      t.string :status
+      t.text :name
+      t.text :status
       t.integer :progress
       t.text :description
       t.date :due_date
