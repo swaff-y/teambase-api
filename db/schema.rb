@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_25_104511) do
+ActiveRecord::Schema.define(version: 2021_05_25_105519) do
 
   create_table "categories_tasks", id: false, charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "task_id", null: false
@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 2021_05_25_104511) do
     t.integer "priority"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "due_date"
+    t.bigint "due_date"
   end
 
   create_table "tasks_users", id: false, charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|

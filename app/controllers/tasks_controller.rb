@@ -78,7 +78,6 @@ class TasksController < ApplicationController
       due_date: params[:due_date],
       status: params[:status],
       progress: params[:progress],
-      category: params[:category],
       description: params[:description],
       project_id: params[:project_id]
     )

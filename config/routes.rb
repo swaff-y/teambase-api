@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root :to => 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-  get '/user-one/:user_id' => 'users#user_one'
+  get '/user-one' => 'users#user_one'
   get '/users-all' => 'users#user_all'
   post '/user_login' => 'users#user_login'
 
@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   get '/project-categories-all' => 'project_categories#categories_all'
   get '/task-categories-all' => 'task_categories#categories_all'
 
-  get '/task-read/:task_id' => 'tasks#read_task'
+  get '/task-read' => 'tasks#read_task'
   post '/task-create' => 'tasks#create_task'
   post '/task-update' => 'tasks#update_task'
   post '/task-priority-update' => 'tasks#task_priority_update'
