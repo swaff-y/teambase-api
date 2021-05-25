@@ -45,7 +45,7 @@ task_array = []
   create = Task.create!(
     name: Faker::TvShows::GameOfThrones.character,
     start_date: Faker::Date.between(from: 2.days.ago, to: Date.today),
-    due_date: Faker::Date.forward(days: 23),
+    due_date: DateTime.current,
     status: status,
     description: Faker::TvShows::GameOfThrones.quote,
     progress: rand(1..100),
